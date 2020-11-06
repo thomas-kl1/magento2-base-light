@@ -1,0 +1,85 @@
+{
+    "name": "opengento/magento2-base-light",
+    "description": "Magento 2 base project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Klein",
+            "email": "thomasklein876@gmail.com"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "colinmollenhour/cache-backend-file": "*",
+        "colinmollenhour/cache-backend-redis": "*",
+        "colinmollenhour/credis": "*",
+        "colinmollenhour/php-redis-session-abstract": "*",
+        "magento/composer": "*",
+        "magento/composer-root-update-plugin": "*",
+        "magento/magento2-base": "*",
+        "magento/framework": "*",
+        "magento/framework-amqp": "*",
+        "magento/framework-bulk": "*",
+        "magento/framework-message-queue": "*",
+        "magento/module-backend": "*",
+        "magento/module-config": "*",
+        "magento/module-cookie": "*",
+        "magento/module-directory": "*",
+        "magento/module-eav": "*",
+        "magento/module-encryption-key": "*",
+        "magento/module-offline-shipping": "*",
+        "magento/module-indexer": "*",
+        "magento/module-media-storage": "*",
+        "magento/module-search": "*",
+        "magento/module-elasticsearch-6": "*",
+        "magento/module-elasticsearch-7": "*",
+        "magento/module-store": "*",
+        "magento/module-theme": "*",
+        "magento/module-grouped-product": "*",
+        "magento/module-configurable-product": "*",
+        "magento/module-product-video": "*",
+        "magento/module-webapi-async": "*",
+        "magento/module-asynchronous-operations": "*",
+        "magento/theme-frontend-luma": "*",
+        "magento/theme-adminhtml-backend": "*"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Magento\\Framework\\": "lib/internal/Magento/Framework/",
+            "Magento\\Setup\\": "setup/src/Magento/Setup/",
+            "Magento\\": "app/code/Magento/",
+            "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/"
+        },
+        "psr-0": {
+            "": [
+                "app/code/",
+                "generated/code/"
+            ]
+        },
+        "files": [
+            "app/etc/NonComposerComponentRegistration.php"
+        ],
+        "exclude-from-classmap": [
+            "**/dev/**",
+            "**/update/**",
+            "**/Test/**"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "extra": {
+        "magento-force": "override"
+    }
+}
