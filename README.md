@@ -1,7 +1,7 @@
 On installation, please set the following settings otherwise you can't login to the backend:
 
 - admin/security/session_lifetime
-
+or use encryption key module bc weird dependency
 
 
 Are mandatory for checkout:
