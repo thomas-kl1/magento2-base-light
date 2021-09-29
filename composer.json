@@ -40,6 +40,7 @@
         "magento/module-directory": "*",
         "magento/module-eav": "*",
         "magento/module-email": "*",
+        "magento/module-elasticsearch-7": "*",
         "magento/module-indexer": "*",
         "magento/module-integration": "*",
         "magento/module-newsletter": "*",
@@ -65,16 +66,15 @@
         "magento/module-url-rewrite": "*",
         "magento/module-user": "*",
         "magento/module-webapi": "*",
-        "magento/theme-adminhtml-backend": "*"
+        "magento/theme-adminhtml-backend": "*",
+        "magento/theme-frontend-luma": "*"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "Magento\\Framework\\": "lib/internal/Magento/Framework/",
             "Magento\\Setup\\": "setup/src/Magento/Setup/",
-            "Magento\\": "app/code/Magento/",
             "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/"
         },
         "psr-0": {
